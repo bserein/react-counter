@@ -2,7 +2,9 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(0); //You use a state because this keeps track of the state that its in, the 0 is for what the initial value is, so count has an initial value of 0
+  // the setCounter is a setter and it is a function that allows us to modify what is inside of the count variable
+  //The convention is to use set and the variable of what you are using, you are also using a destructured array 
   // const [cars, setCars] = useState(['Audi', 'Tesla', 'Ford']);
   // const [person, setPerson] = useState({ name: 'Jeremiah', age: 31, shirt: 'tan' });
   return (
