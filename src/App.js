@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Coffees from './Coffees';
 import './App.css';
 
 function App() {
@@ -7,6 +8,18 @@ function App() {
   //The convention is to use set and the variable of what you are using, you are also using a destructured array 
   // const [cars, setCars] = useState(['Audi', 'Tesla', 'Ford']);
   // const [person, setPerson] = useState({ name: 'Jeremiah', age: 31, shirt: 'tan' });
+
+useEffect(() => {
+  setCounter(500)
+},[])
+
+  // useEffect(() => {
+  //   console.log('use effect was run', counter)
+  // },[counter]) //<-- this is a dependency
+  //with out the empty array it would have run everytime I change the button 
+  // with the counter it will change or show the console log everytime the counter is changed
+  //adding the counter to the console log will tell it where it is in the counter 
+  //without a dependency the useEffect will run for every change that is made
   return (
     <div className="App">
       <header className="App-header">
@@ -31,6 +44,7 @@ function App() {
         onClick={() => {setCounter(counter - 1)}}>
           -
         </button>}
+        <Coffees />
         </div>
       </header>
     </div>
